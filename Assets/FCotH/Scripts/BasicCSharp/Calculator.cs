@@ -1,4 +1,8 @@
-public static class LevelCalculator
+/*
+This script is a general purpose script for calculations
+*/
+
+public static class Calculator
 {
     // returns the stat after level growth calculation
     public static float GetStatLevel(float baseStat, float growth, int level){

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b75f4a8727af343acee47a96b27df5, type: 3}
   m_Name: TestStats
   m_EditorClassIdentifier: 
-  BaseHP: 0
-  BaseHPGrowth: 0
-  BaseATK: 0
-  BaseATKGrowth: 0
-  BaseSP: 0
-  BaseSPGrowth: 0
-  BaseARM: 0
-  BaseARMGrowth: 0
-  BasePLAT: 0
-  BasePLATGrowth: 0
+  BaseHP: 100
+  BaseHPGrowth: 0.1
+  BaseATK: 20
+  BaseATKGrowth: 0.2
+  BaseSP: 50
+  BaseSPGrowth: 0.1
+  BaseARM: 1
+  BaseARMGrowth: 1
+  BasePLAT: 5
+  BasePLATGrowth: 1

@@ -1,3 +1,8 @@
+/*
+This script holds the base values for characters before levels
+Also has the rates at which they grow per level
+*/
+
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterStats", menuName = "Scriptable Objects/CharacterStats")]
@@ -30,15 +35,15 @@ public class CharacterStats : ScriptableObject
     {
         string result = "";
         result += "Base Health: " + BaseHP;
-        result += "\nHealth Growth" + BaseHPGrowth * 100 + "%";
-        result += "Base Attack: " + BaseATK;
-        result += "\nAttack Growth" + BaseATKGrowth * 100 + "%";
-        result += "Base Special Points: " + BaseSP;
-        result += "\nSpecial Point Growth" + BaseSPGrowth * 100 + "%";
-        result += "Base Armor: " + BaseARM;
-        result += "\nArmor Growth" + BaseARMGrowth * 100 + "%";
-        result += "Base Plating: " + BasePLAT;
-        result += "\nPlating Growth" + BasePLATGrowth * 100 + "%";
+        result += "\nHealth Growth: " + BaseHPGrowth * 100 + "%";
+        result += "\nBase Attack: " + BaseATK;
+        result += "\nAttack Growth: " + BaseATKGrowth * 100 + "%";
+        result += "\nBase Special Points: " + BaseSP;
+        result += "\nSpecial Point Growth: " + BaseSPGrowth * 100 + "%";
+        result += "\nBase Armor: " + BaseARM;
+        result += "\nArmor Growth: " + BaseARMGrowth * 100 + "%";
+        result += "\nBase Plating: " + BasePLAT;
+        result += "\nPlating Growth: " + BasePLATGrowth * 100 + "%";
         return result;
     }
 }
