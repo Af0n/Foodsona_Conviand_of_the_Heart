@@ -18,4 +18,16 @@ public class CombatCharacter : MonoBehaviour
     public float SpecialPoints{
         get { return currentSP; }
     }
+
+    public void TakeDamage(float incoming){
+        currentHP -= incoming;
+        Mathf.Clamp(currentHP, 0, Char.BaseHealth);
+        // damage effects
+    }
+
+    public void HealDamage(float incoming){
+        currentHP += incoming;
+        Mathf.Clamp(currentHP, 0, Char.BaseHealth);
+        // heal effects
+    }
 }
