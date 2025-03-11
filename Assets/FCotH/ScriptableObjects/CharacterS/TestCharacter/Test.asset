@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   Name: Testo Scrumblo
+  Level: 1
   Stats: {fileID: 11400000, guid: 264419fb32ed7074b9e1ecbb09920a4b, type: 2}
