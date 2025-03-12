@@ -21,6 +21,6 @@ MonoBehaviour:
   PLATModifier: 10
   PercentHPModifier: 1.5
   PercentATKModifier: 0.6
-  PercentSPModifier: 0
+  PercentSPModifier: 0.2
   PercentARMModifier: 0.05
   PercentPLATModifier: 0.1
