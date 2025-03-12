@@ -10,6 +10,19 @@ public class Character : ScriptableObject
 {
     public string Name;
     public CharacterStats Stats;
+    [Header("Flat Modifiers")]
+    public float HPModifier;
+    public float ATKModifier;
+    public float SPModifier;
+    public float ARMModifier;
+    public float PLATModifier;
+    [Header("Percent of Base Modifiers")]
+    public float PercentHPModifier;
+    public float PercentATKModifier;
+    public float PercentSPModifier;
+    public float PercentARMModifier;
+    public float PercentPLATModifier;
+
 
     private int level;
     private float levelHP;
@@ -63,11 +76,11 @@ public class Character : ScriptableObject
         result += "Name: " + Name;
         result += "\nLevel: " + Level;
         result += "\nStats";
-        result += "\nBase Health: " + BaseHealth;
-        result += "\nBase Attack: " + BaseAttack;
-        result += "\nBase Special Points: " + BaseSpecialPoint;
-        result += "\nBase Armor: " + BaseArmor;
-        result += "\nBase Plating: " + BasePlating;
+        result += "\nHealth: " + (BaseHealth * (1+PercentHPModifier) + HPModifier) + " = (" + BaseHealth + " * " + (1+PercentHPModifier) + ") + " + HPModifier;
+        result += "\nAttack: " + (BaseAttack * (1+PercentATKModifier) + ATKModifier) + " = (" + BaseAttack + " * " + (1+PercentATKModifier) + ") + " + ATKModifier;
+        result += "\nSpecial Points: " + (BaseSpecialPoint * (1+PercentSPModifier) + SPModifier) + " = (" + BaseSpecialPoint + " * " + (1+PercentSPModifier) + ") + " + SPModifier;
+        result += "\nArmor: " + (BaseArmor * (1+PercentARMModifier) + ARMModifier) + " = (" + BaseArmor + " * " + (1+PercentARMModifier) + ") + " + ARMModifier;
+        result += "\nPlating: " + (BasePlating * (1+PercentPLATModifier) + PLATModifier) + " = (" + BasePlating + " * " + (1+PercentPLATModifier) + ") + " + PLATModifier;
         return result;
     }
 }

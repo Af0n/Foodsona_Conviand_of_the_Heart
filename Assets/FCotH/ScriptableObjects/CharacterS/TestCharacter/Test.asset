@@ -13,5 +13,14 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   Name: Testo Scrumblo
-  Level: 1
   Stats: {fileID: 11400000, guid: 264419fb32ed7074b9e1ecbb09920a4b, type: 2}
+  HPModifier: 200
+  ATKModifier: 10
+  SPModifier: 30
+  ARMModifier: 3
+  PLATModifier: 10
+  PercentHPModifier: 1.5
+  PercentATKModifier: 0.6
+  PercentSPModifier: 0
+  PercentARMModifier: 0.05
+  PercentPLATModifier: 0.1

@@ -8,6 +8,7 @@ using UnityEngine;
 public class CombatCharacter : MonoBehaviour
 {
     public Character Char;
+
     private float currentHP;
     private float currentSP;
 

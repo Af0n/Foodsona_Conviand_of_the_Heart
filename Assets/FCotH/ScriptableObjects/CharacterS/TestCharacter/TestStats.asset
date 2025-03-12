@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: TestStats
   m_EditorClassIdentifier: 
   BaseHP: 100
-  BaseHPGrowth: 0.1
+  BaseHPGrowth: 0.2
   BaseATK: 20
-  BaseATKGrowth: 0.2
+  BaseATKGrowth: 0.1
   BaseSP: 50
-  BaseSPGrowth: 0.1
+  BaseSPGrowth: 0.2
   BaseARM: 1
-  BaseARMGrowth: 1
+  BaseARMGrowth: 0.25
   BasePLAT: 5
-  BasePLATGrowth: 1
+  BasePLATGrowth: 0.1
