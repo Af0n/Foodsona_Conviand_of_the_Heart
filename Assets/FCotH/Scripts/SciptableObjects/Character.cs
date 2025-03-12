@@ -1,6 +1,7 @@
 /*
 This script has functionality for leveling up
 Holds base values for current level before modifiers, gear bonuses, etc.
+Has properties that return these values but including modifiers
 */
 
 using UnityEngine;
@@ -22,7 +23,6 @@ public class Character : ScriptableObject
     public float PercentSPModifier;
     public float PercentARMModifier;
     public float PercentPLATModifier;
-
 
     private int level;
     private float levelHP;
@@ -60,6 +60,31 @@ public class Character : ScriptableObject
         get { return levelPLAT; }
     }
 
+    public float MaxHealth
+    {
+        get { return BaseHealth * (1+PercentHPModifier) + HPModifier; }
+    }
+
+    public float Attack
+    {
+        get { return BaseAttack * (1+PercentATKModifier) + ATKModifier; }
+    }
+
+    public float MaxSpecialPoint
+    {
+        get { return BaseSpecialPoint * (1+PercentSPModifier) + SPModifier; }
+    }
+
+    public float Armor
+    {
+        get { return BaseArmor * (1+PercentARMModifier) + ARMModifier; }
+    }
+
+    public float Plating
+    {
+        get { return BasePlating * (1+PercentPLATModifier) + PLATModifier; }
+    }
+
     public void SetLevel(int _level)
     {
         level = _level;
@@ -76,11 +101,11 @@ public class Character : ScriptableObject
         result += "Name: " + Name;
         result += "\nLevel: " + Level;
         result += "\nStats";
-        result += "\nHealth: " + (BaseHealth * (1+PercentHPModifier) + HPModifier) + " = (" + BaseHealth + " * " + (1+PercentHPModifier) + ") + " + HPModifier;
-        result += "\nAttack: " + (BaseAttack * (1+PercentATKModifier) + ATKModifier) + " = (" + BaseAttack + " * " + (1+PercentATKModifier) + ") + " + ATKModifier;
-        result += "\nSpecial Points: " + (BaseSpecialPoint * (1+PercentSPModifier) + SPModifier) + " = (" + BaseSpecialPoint + " * " + (1+PercentSPModifier) + ") + " + SPModifier;
-        result += "\nArmor: " + (BaseArmor * (1+PercentARMModifier) + ARMModifier) + " = (" + BaseArmor + " * " + (1+PercentARMModifier) + ") + " + ARMModifier;
-        result += "\nPlating: " + (BasePlating * (1+PercentPLATModifier) + PLATModifier) + " = (" + BasePlating + " * " + (1+PercentPLATModifier) + ") + " + PLATModifier;
+        result += "\nMax Health: " + MaxHealth + " = (" + BaseHealth + " * " + (1+PercentHPModifier) + ") + " + HPModifier;
+        result += "\nAttack: " + Attack + " = (" + BaseAttack + " * " + (1+PercentATKModifier) + ") + " + ATKModifier;
+        result += "\nMax Special Points: " + MaxSpecialPoint + " = (" + BaseSpecialPoint + " * " + (1+PercentSPModifier) + ") + " + SPModifier;
+        result += "\nArmor: " + Armor + " = (" + BaseArmor + " * " + (1+PercentARMModifier) + ") + " + ARMModifier;
+        result += "\nPlating: " + Plating + " = (" + BasePlating + " * " + (1+PercentPLATModifier) + ") + " + PLATModifier;
         return result;
     }
 }
